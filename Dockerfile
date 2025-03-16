@@ -9,5 +9,5 @@ WORKDIR /usr/share/nginx/html/
 RUN unzip Oxer.zip
 RUN mv oxer-html/* .
 RUN rm -rf oxer-html/
-RUN service nginx restart
+RUN nginx -s reload
 EXPOSE 80
