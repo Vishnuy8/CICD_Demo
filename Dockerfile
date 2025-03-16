@@ -10,5 +10,5 @@ WORKDIR /usr/share/nginx/html/
 RUN unzip Oxer.zip
 RUN mv oxer-html/* .
 RUN rm -rf oxer-html/
-RUN systemctl restart nginx
+CMD ["nginx", "-g", "daemon off;"]
 EXPOSE 80
