@@ -7,7 +7,7 @@ ADD Oxer.zip /usr/share/nginx/html/
 ADD nginx.conf /etc/nginx/
 WORKDIR /usr/share/nginx/html/
 RUN unzip Oxer.zip
-RUN mv Oxer-html/* .
-RUN rm -rf Oxer-html/
+RUN mv oxer-html/* .
+RUN rm -rf oxer-html/
 RUN service nginx restart
 EXPOSE 80
