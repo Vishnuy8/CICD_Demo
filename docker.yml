@@ -1,4 +1,4 @@
 - hosts: all
-      tasks: 
-           -  name: create container 
-              shell: docker container run -itd  - - name  docker-container -p 9000:80 vishnuy8/my_image
+  tasks:
+    - name: Create and start a Docker container
+      shell: docker container run -itd --name docker-container -p 9000:80 vishnuy8/my_image
